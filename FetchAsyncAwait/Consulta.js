@@ -1,6 +1,7 @@
 document.getElementById('btn').addEventListener("click", async function (){
     let dato = await hacerP();
     console.log(dato);
+    document.getElementById('img').src=dato.url
 
  });
 
