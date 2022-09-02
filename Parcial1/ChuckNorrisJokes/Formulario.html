@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Formulario</title>
+        
+    </head>
+    <body>
+        <h1>ChuckNorris Jokes</h1>
+
+
+            <label for="Nombre">Nombre</label>
+            <input id="Nombre" type="text" placeholder="Nombre"/>
+            
+            <label for="Apellido">Apellido</label>
+            <input id="Apellido" type="text" placeholder="Apellido"/>
+            
+  
+        </br><button id="btn">Traer broma</button></br></br>
+
+        <label for="broma">ChuckNorris dice: </label>
+        <textarea id="broma" cols="30" rows="10"></textarea>
+
+         <script>
+
+               document.getElementById("btn").addEventListener("click", async function(){
+                let broma = await getbroma();
+                console.log(broma);
+
+                document.getElementById("broma").value=broma.value.joke;
+            });
+
+            async function getbroma() {
+                let varNom=document.getElementById("Nombre").value;
+                let varAp=document.getElementById("Apellido").value;
+
+                let vUrl = `http://api.icndb.com/jokes/random?firstName=${varNom.value}&astName=${varAp.value}`;
+
+            
+
+                    let headersList = {
+                      "Accept": "*/*",
+                      "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+                    }
+            let response = await fetch(vUrl, { 
+                method: "GET",
+                headers: headersList
+            });
+
+            let data = await response.json();
+            console.log(data.value);
+            return data;
+
+        }
+
+         </script> 
+    </body>
+</html>
