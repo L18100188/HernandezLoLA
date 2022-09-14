@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Consulta API</title>
+    </head>
+    <body>
+        <center></br><button id="btn">Peticion</button></br></br></center>
+        <script>
+            document.getElementById('btn').addEventListener("click", function (){
+                hacerP(); 
+            });
+
+
+            function hacerP() {
+              fetch("https://localhost:8082")
+               .then( res => res.text() )
+               .then( datos => console.log(datos))
+            }
+
+        </script>
+    </body>
+</html>
