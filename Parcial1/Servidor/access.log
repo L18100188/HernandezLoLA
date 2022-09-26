@@ -1,0 +1,6 @@
+::ffff:127.0.0.1 - - [26/Sep/2022:01:13:55 +0000] "GET /suma/?x=1%5E&y=2 HTTP/1.1" 200 12 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [26/Sep/2022:01:14:49 +0000] "GET /mayusculas/:cadena HTTP/1.1" 200 20 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [26/Sep/2022:01:15:08 +0000] "POST /json HTTP/1.1" 200 38 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [26/Sep/2022:01:15:29 +0000] "POST /texto HTTP/1.1" 500 1583 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [26/Sep/2022:01:15:56 +0000] "GET /texto HTTP/1.1" 404 307 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [26/Sep/2022:01:16:26 +0000] "GET /texto HTTP/1.1" 404 307 "-" "Thunder Client (https://www.thunderclient.com)"
