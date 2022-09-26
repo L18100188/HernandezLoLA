@@ -4,3 +4,4 @@
 ::ffff:127.0.0.1 - - [26/Sep/2022:01:15:29 +0000] "POST /texto HTTP/1.1" 500 1583 "-" "Thunder Client (https://www.thunderclient.com)"
 ::ffff:127.0.0.1 - - [26/Sep/2022:01:15:56 +0000] "GET /texto HTTP/1.1" 404 307 "-" "Thunder Client (https://www.thunderclient.com)"
 ::ffff:127.0.0.1 - - [26/Sep/2022:01:16:26 +0000] "GET /texto HTTP/1.1" 404 307 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [26/Sep/2022:01:17:46 +0000] "GET /texto HTTP/1.1" 404 307 "-" "Thunder Client (https://www.thunderclient.com)"
