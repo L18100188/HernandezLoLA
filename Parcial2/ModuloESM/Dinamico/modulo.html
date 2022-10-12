@@ -17,17 +17,19 @@
         <script type="module">
             document.getElementById("btn").addEventListener("click", function(){  
 
-                import('./moduloESM').then(function(modulo) {
+                import('./modESM').then(function(modulo) {
                     let cadMay=modulo.pasarMayusculas(document.getElementById("cadena").value);
                     document.getElementById("resultado").value=cadMay;
+                    console.log(cadMay);
                 })
             })
 
             document.getElementById("btn2").addEventListener("click", function(){
                 
-                import('./moduloESM').then(function(modulo) {
+                import('./modESM').then(function(modulo) {
                     let cadMay=modulo.quitarEspacios(document.getElementById("cadena").value);
                     document.getElementById("resultado").value=cadMay;
+                    console.log(cadMay);
                 })
             })
         </script>
