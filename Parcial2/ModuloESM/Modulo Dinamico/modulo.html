@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>ModuloESM</title>
+    </head>
+    <body>
+        <label for="cadena">Cadena</label>
+        <input id="cadena" type="text"><br>
+        <button id="btn">Mayus</button>
+        <button id="btn2">Espacios</button><br>
+
+        <label for="resultado">Resultado</label>
+        <input id="resultado" type="text">
+
+        <script type="module">
+            document.getElementById("btn").addEventListener("click", function(){  
+
+                import('./moduloESM').then(function(modulo) {
+                    let cadMay=modulo.pasarMayusculas(document.getElementById("cadena").value);
+                    document.getElementById("resultado").value=cadMay;
+                })
+            })
+
+            document.getElementById("btn2").addEventListener("click", function(){
+                
+                import('./moduloESM').then(function(modulo) {
+                    let cadMay=modulo.quitarEspacios(document.getElementById("cadena").value);
+                    document.getElementById("resultado").value=cadMay;
+                })
+            })
+        </script>
+    </body>
+</html>
