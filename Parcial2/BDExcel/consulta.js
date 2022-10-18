@@ -15,7 +15,7 @@ con.query('SELECT * FROM registro', function(error, results, fields){
     if(error) throw error;
     //console.log(results)
     var xls = json2xls(results);
-    fs.writeFileSync(`${__dirname}/data.xlsx`, xls, 'binary');
+    fs.writeFileSync(`${__dirname}/datos.xlsx`, xls, 'binary');
 });
 
 //con.query("SELECT * FROM registro WHERE NumControl = ?",['1'], function(error, results, fields){
