@@ -57,7 +57,7 @@ app.post('/post', (req, res) => {
 app.put('/put/:NumControl', (req, res) => {
     console.log(req.query);
 
-    let params = {
+    let querys = {
         
         'NombreEs': req.query.NombreEs,
         'ApellidoPa': req.query.ApellidoPa,
@@ -66,7 +66,7 @@ app.put('/put/:NumControl', (req, res) => {
 
     let sql = `UPDATE registro SET ? WHERE NumControl = ${req.params.NumControl}`;
 
-    let query = con.query(sql,params,(err,result)=>{
+    let query = con.query(sql,querys,(err,result)=>{
         if(err) throw err;
         res.send('Update efectuado')
     });
