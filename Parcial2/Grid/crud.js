@@ -1,7 +1,13 @@
 const { query } = require('express');
-const express = require('express')
+const express = require('express');
 var mySQL = require('mysql'); 
-const app = express()
+const app = express();
+const cors = require('cors');
+
+app.use(express.json())
+app.use(express.text())
+app.use(cors({ origin:"*"}))
+//app.header("Access-Control-Allow-Origin: http://localhost:8091");
 
 var con = mySQL.createConnection({
     host     : "localhost",
