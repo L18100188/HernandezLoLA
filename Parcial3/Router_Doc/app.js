@@ -1,6 +1,6 @@
 const express = require('express')
 const cors =  require('cors')
-const ruta_crud = require('./CRUD')
+const ruta_crud = require('./Routes/CRUD')
 const app = express();
 const path=require('path')
 const swaggerUI     = require('swagger-ui-express');
