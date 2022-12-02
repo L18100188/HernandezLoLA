@@ -77,8 +77,8 @@ describe('Obtener el estudiante con el NumControl 18100188: ',()=>{
    });
 
 //Test que actualiza el ID
-describe('Actualiza el ID que pongas: ',()=>{
-    it('Deberia de actualizar el id', (done) => {
+describe('Actualiza el NumControl que pongas: ',()=>{
+    it('Deberia de actualizar el NumControl', (done) => {
     chai.request(url)
     .put('/ActualizarEstudiante/18100189?NombreEs=Luis&ApellidoPa=Lopez&ApellidoMa=Hdz')
     .end( function(err,res){
