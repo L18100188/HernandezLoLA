@@ -49,8 +49,8 @@ describe('Obtener el estudiante con el NumControl 18100188: ',()=>{
    });
 
    //Test que elimina el ID que tu pongas 
-   describe('Elimina el NumControl 18100188: ',()=>{
-    it('Debe eliminar el NumControl 18100188', (done) => {
+   describe('Elimina el NumControl 18100190: ',()=>{
+    it('Debe eliminar el NumControl 18100190', (done) => {
     chai.request(url)
     .get('/MostrarEstudiantes')
     .end( function(err,res){
@@ -58,7 +58,7 @@ describe('Obtener el estudiante con el NumControl 18100188: ',()=>{
     //expect(res.body).to.have.lengthOf(2);
     expect(res).to.have.status(200);
     chai.request(url)
-    .del('/EliminarEstudiante/18100188')
+    .del('/EliminarEstudiante/18100190')
     .end( function(err,res){
     //console.log(res.body)
     expect(res).to.have.status(200);
@@ -80,7 +80,7 @@ describe('Obtener el estudiante con el NumControl 18100188: ',()=>{
 describe('Actualiza el NumControl que pongas: ',()=>{
     it('Deberia de actualizar el NumControl', (done) => {
     chai.request(url)
-    .put('/ActualizarEstudiante/18100189?NombreEs=Luis&ApellidoPa=Lopez&ApellidoMa=Hdz')
+    .put('/ActualizarEstudiante/18100189?NombreEs=Luis&ApellidoPa=Lopez&ApellidoMa=Hdez')
     .end( function(err,res){
     //expect(res.body).to.have.property('days').to.be.equal(20);
     expect(res).to.have.status(200);
