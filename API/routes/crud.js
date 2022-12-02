@@ -65,7 +65,7 @@ router.get('/:NumControl', (req, res) => {
    *   post:
    *     description: Agregar estudiantes a la BD.
    *     parameters:
-   *        - name: NumControl
+   *       - name: NumControl
    *         in: query
    *         description: 'Agrega el NumControl del estudiante'
    *         schema:
