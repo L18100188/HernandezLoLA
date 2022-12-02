@@ -14,7 +14,7 @@ const swaggerOptions = {definition:{
      info: {title: 'API Estudiantes',
      version: '1.0.0',      
     },
-    servers:[{url: "http://localhost:8081"}],  
+    servers:[{url: "http://localhost:8095"}],  
     },
     apis: [`${path.join(__dirname,"./routes/crud.js")}`],
   };
@@ -34,4 +34,4 @@ const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(swaggerDocs));
 
 
-app.listen(8081, ()=>{console.log('Servidor corriendo express')})
+app.listen(8095, ()=>{console.log('Servidor corriendo express')})
